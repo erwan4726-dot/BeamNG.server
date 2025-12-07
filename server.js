@@ -5,7 +5,7 @@ const path = require('path'); // Nécessaire pour les chemins de fichiers
 
 // --- SÉCURITÉ : URI MongoDB vient des variables d'environnement de Render ---
 // IMPORTANT : Tu dois la définir dans les réglages "Environment" de Render !
-const MONGO_URI = const MONGO_URI = process.env.MONGO_URI; 
+const MONGO_URI = process.env.MONGO_URI; 
 
 const app = express();
 // Sur Render, l'environnement fixe le port, on utilise process.env.PORT ou 3000 par défaut
