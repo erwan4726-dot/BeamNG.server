@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeamNG RP - Marché de Voitures</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #0d0f1a !important; 
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="nav-left">
+            <a href="#" class="nav-item">Menu</a>
+            <a href="create_ad.html" class="nav-item nav-create-ad">Créer une annonce</a> 
+        </div>
+        <div class="nav-right">
+            <div class="nav-item" id="balance">Balance: 36.765 $</div>
+            <a href="#" class="nav-item" id="settings-button">
+                <i class="fas fa-cog"></i> 
+            </a>
+        </div>
+    </nav>
+
+    <main class="listing-container" id="ad-listings">
+        <p id="no-ads-message" style="text-align: center; color: #666; margin-top: 50px; font-size: 1.2em;">Aucune annonce pour le moment. Soyez le premier à publier !</p>
+    </main>
+
+    <footer class="site-footer">
+        <div id="site-time">Heure du Site: 12:00:00</div>
+    </footer>
+
+    <div id="settings-modal" class="modal" style="display: none;">
+        <div class="modal-content" id="settings-modal-content">
+            <span class="close-button" id="close-settings-modal">&times;</span>
+            <h2>Outils de débogage</h2>
+
+            <div class="debug-tool">
+                <label for="theme-selector">Style visuel :</label>
+                <select id="theme-selector">
+                    <option value="dark-neon">🔥 Dark Néon (Actuel)</option>
+                    <option value="light-default">💻 Light Rétro</option>
+                    <option value="matrix-code">🦠 Toxic Matrix</option>
+                    <option value="sunset-glow">🌇 Sunset Glow</option>
+                    <option value="black-gold">✨ Black & Gold</option>
+                </select>
+                <button id="apply-theme">Appliquer Thème</button>
+            </div>
+
+            <div class="debug-tool">
+                <label for="time-scale">Vitesse du temps (1 sec IRL = ? sec sur le site) :</label>
+                <input type="number" id="time-scale" value="60">
+                <button id="apply-time-scale">Appliquer</button>
+            </div>
+            <div class="debug-tool">
+                <label for="money-amount">Modifier l'argent :</label>
+                <input type="number" id="money-amount" value="1000">
+                <button id="add-money">Ajouter</button>
+                <button id="remove-money">Retirer</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="details-modal" class="modal" style="display: none;">
+        <div class="modal-content car-details-content">
+            <span class="close-button" id="close-details-modal">&times;</span>
+            <h2 id="details-model">Modèle: [Non défini]</h2>
+            <div class="details-image-container">
+                <img src="" alt="Image de la voiture" id="details-car-image" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="details-info">
+                <p><strong>Année :</strong> <span id="details-year"></span></p>
+                <p><strong>Kilométrage :</strong> <span id="details-mileage"></span> km</p>
+                <p><strong>Couleur :</strong> <span id="details-color"></span></p>
+                <p><strong>État véhicule :</strong> <span id="details-state"></span></p>
+                <p class="details-price"><strong>Prix :</strong> <span id="details-price"></span> $</p>
+            </div>
+            <button class="buy-button" id="buy-car-button">Acheter ce véhicule</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
