@@ -128,3 +128,4 @@ app.post('/api/balance/:id/update', async (req, res) => {
         res.status(500).json({ error: 'Erreur serveur.' });
     }
 });
+
